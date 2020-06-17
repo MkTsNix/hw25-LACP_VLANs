@@ -58,9 +58,6 @@
             PERSISTENT_DHCLIENT="yes"
             DEFROUTE=no
 
-#     - name: 'remove default gw from vagrant'
-#       shell: ip r del default
-
      - name: 'Copy bond config to host'
        template: src={{ item.src }} dest={{ item.dest }}
        with_items:
